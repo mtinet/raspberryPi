@@ -1,6 +1,6 @@
 # raspberryPi
 
-## 라즈베리파이와 자바스크립트로 시작하는 IoT 예제
+## raspberryPi_IoT 라즈베리파이와 자바스크립트로 시작하는 IoT 예제
 
 * node.js, express, socket.io 를 사용함  
 * sample4, sample5는 express 프레임워크를 사용하는 예제임  
