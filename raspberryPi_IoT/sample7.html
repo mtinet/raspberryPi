@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Hello Pi!</title>
+    <script src = "https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src = "/socket.io/socket.io.js"></script>
+    <script>
+    $(function() {
+      var socket = io();
+      var id = 'guest' + Math.floor((Math.random() * 10) + 1);
+
+      socket.on('msg', function (data) {
+        $('#msgs').append($('<p>').text('S ' + data.id + ' : ' + data.msg));
+      });
+
+      $('#send1').click(function() {
+        socket.emit('msg1', { id : id, msg : $('input').val()});
+        $('#msgs').append($('<p>').text('C ' + id + ' : ' + $('input').val()));
+
+        $('input').val('');
+      });
+
+      $('#send2').click(function() {
+        socket.emit('msg2', { id : id, msg : $('input').val()});
+        $('#msgs').append($('<p>').text('C ' + id + ' : ' + $('input').val()));
+
+        $('input').val('');
+      });
+
+      $('#send3').click(function() {
+        socket.emit('msg3', { id : id, msg : $('input').val()});
+        $('#msgs').append($('<p>').text('C ' + id + ' : ' + $('input').val()));
+
+        $('input').val('');
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <input type='text' />
+    </p>
+    <button id = 'send1'> SEND1</button>
+    <button id = 'send2'> SEND2</button>
+    <button id = 'send3'> SEND3</button>
+    <div id = 'msgs'>
+    </div>
+  </body>
+  </html>
