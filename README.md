@@ -10,5 +10,5 @@
   <code> # npm link socket.io  </code>
 
 
-## raspberryPi_Make 라즈베리파이와 파이썬, C로 활용하는 예제  
+## raspberryPi_GPIO 라즈베리파이를 메이킹 툴로 활용하기 위해 파이썬, C를 활용하는 예제  
 * 
